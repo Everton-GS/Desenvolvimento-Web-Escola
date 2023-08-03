@@ -13,43 +13,40 @@ import lombok.Getter;
 import lombok.Setter;
 
 
+@AllArgsConstructor
 @Getter
 @Setter
-@AllArgsConstructor
 @Entity
-@Table(name = "db_professor")
-public class Professor {
+@Table(name = "db_aluno")
+
+public class Aluno {
     
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.AUTO) 
     @Id
     private long id;
 
-    @Column(name = "login_professor")
+    @Column(name = "login_aluno")
     private String login;
-
-    @Column(name = "senha_professor")
+    
+    @Column(name = "senha_aluno")
     private String senha;
-
-    @Column(name = "registro_professor")
-    private String cfep;
-
-    @Column(name = "nome_professor")
+    
+    @Column(name = "nome_aluno")
     private String nome;
 
-    @Column(name = "genero_professor")
+    @Column(name = "genero_aluno")
     private char genero;
 
-    @Column(name = "nascimento_professor")
+    @Column(name = "nascimento_aluno")
     @Temporal(TemporalType.DATE)
-    private Date dataNascimento;
+    private Date data;
 
-    @Column(name = "email_professor")
+    @Column(name = "email_aluno")
     private String email;
 
-    @Column(name = "telefone_professor")
+    @Column(name="telefone_aluno")
     private String telefone;
 
     @Column(name = "telefone_Emergencia")
-    private String telefoneEmergencia;
-
+    private String contatoEmerfencial;
 }
