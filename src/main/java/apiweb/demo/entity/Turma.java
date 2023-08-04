@@ -27,17 +27,17 @@ public class Turma {
     private String turma;
 
     @ManyToOne
-    @JoinColumn(name = "professor_id")
+    @JoinColumn(name = "professor")
     private Professor professor;
 
-    @Column(name = "materia_aplicada")
+    @Column(name = "materia")
     private String materia;
     
     @ManyToOne
     @JoinColumn(name = "aluno")
     private Aluno aluno;
 
-    @Column(name = "notas_recebida")
+    @Column(name = "notas")
     private double [] nota = new double[4];
    
     

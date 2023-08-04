@@ -24,32 +24,32 @@ public class Professor {
     @Id
     private long id;
 
-    @Column(name = "login_professor")
+    @Column(name = "login")
     private String login;
 
-    @Column(name = "senha_professor")
+    @Column(name = "senha")
     private String senha;
 
-    @Column(name = "registro_professor")
+    @Column(name = "registro cfep")
     private String cfep;
 
-    @Column(name = "nome_professor")
+    @Column(name = "nome")
     private String nome;
 
-    @Column(name = "genero_professor")
+    @Column(name = "genero")
     private char genero;
 
-    @Column(name = "nascimento_professor")
+    @Column(name = "nascimento")
     @Temporal(TemporalType.DATE)
     private Date dataNascimento;
 
-    @Column(name = "email_professor")
+    @Column(name = "email")
     private String email;
 
-    @Column(name = "telefone_professor")
+    @Column(name = "telefone")
     private String telefone;
 
-    @Column(name = "telefone_Emergencia")
+    @Column(name = "Emergencia")
     private String telefoneEmergencia;
 
 }
