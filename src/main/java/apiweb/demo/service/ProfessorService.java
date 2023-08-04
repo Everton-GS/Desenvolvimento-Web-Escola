@@ -4,10 +4,12 @@ import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import apiweb.demo.entity.Professor;
 import apiweb.demo.repository.ProfessorRepository;
 
+@Service
 public class ProfessorService {
 
  @Autowired   

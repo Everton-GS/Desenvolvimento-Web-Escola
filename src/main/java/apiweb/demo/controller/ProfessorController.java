@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+
 import apiweb.demo.entity.Professor;
 import apiweb.demo.service.ProfessorService;
 
@@ -18,8 +19,7 @@ import apiweb.demo.service.ProfessorService;
 @RequestMapping(value = "/")
 public class ProfessorController {
 
-    @Autowired
-    Professor professor;
+  
 
     @Autowired
     ProfessorService Professorservice;
@@ -30,8 +30,8 @@ public class ProfessorController {
                   return ResponseEntity.ok().build();
     }
 
-    @PostMapping("Altera")
-    public ResponseEntity<Professor>alterar(@PathVariable Long id,@PathVariable String telefone){
+    
+    public ResponseEntity<Professor>alterar(Professor professor, @PathVariable Long id,@PathVariable String telefone){
          Professorservice.alterarContato(professor, id, telefone);
          return ResponseEntity.ok().build();
     }
@@ -40,5 +40,5 @@ public class ProfessorController {
     public List<Professor> listar(){
       return Professorservice.listar();
     }
-    
+
 }

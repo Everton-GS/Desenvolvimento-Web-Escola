@@ -5,6 +5,8 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -23,13 +25,20 @@ public class Turma {
 
     @Column(name = "turma")
     private String turma;
-    @Column(name = "professor")
+
+    @ManyToOne
+    @JoinColumn(name = "professor_id")
     private Professor professor;
+
     @Column(name = "materia_aplicada")
     private String materia;
-    @Column(name = "aluno")
+    
+    @ManyToOne
+    @JoinColumn(name = "aluno")
     private Aluno aluno;
+
     @Column(name = "notas_recebida")
     private double [] nota = new double[4];
+   
     
 }
