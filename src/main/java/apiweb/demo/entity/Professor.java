@@ -10,11 +10,13 @@ import jakarta.persistence.Temporal;
 import jakarta.persistence.TemporalType;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 
 @Getter
 @Setter
+@NoArgsConstructor
 @AllArgsConstructor
 @Entity
 @Table(name = "db_professor")
@@ -24,32 +26,32 @@ public class Professor {
     @Id
     private long id;
 
-    @Column(name = "login")
+    @Column(name = "login_professor")
     private String login;
 
-    @Column(name = "senha")
+    @Column(name = "senha_professor")
     private String senha;
 
-    @Column(name = "registro cfep")
+    @Column(name = "cfep_professor")
     private String cfep;
 
-    @Column(name = "nome")
+    @Column(name = "nome_professor")
     private String nome;
 
-    @Column(name = "genero")
+    @Column(name = "genero_professor")
     private char genero;
 
-    @Column(name = "nascimento")
+    @Column(name = "nascimento_professor")
     @Temporal(TemporalType.DATE)
     private Date dataNascimento;
 
-    @Column(name = "email")
+    @Column(name = "email_professor")
     private String email;
 
-    @Column(name = "telefone")
+    @Column(name = "telefone_professor")
     private String telefone;
 
-    @Column(name = "Emergencia")
+    @Column(name = "emergencia_professor")
     private String telefoneEmergencia;
 
 }

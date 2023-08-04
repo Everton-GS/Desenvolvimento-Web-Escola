@@ -27,16 +27,16 @@ public class ProfessorController {
     @PostMapping("add")
     public ResponseEntity<Professor> add(@RequestBody Professor professor){
             Professorservice.adcionar(professor);
-                  return ResponseEntity.ok().build();
+                  return ResponseEntity.ok(professor);
     }
 
     
     public ResponseEntity<Professor>alterar(Professor professor, @PathVariable Long id,@PathVariable String telefone){
          Professorservice.alterarContato(professor, id, telefone);
-         return ResponseEntity.ok().build();
+             return ResponseEntity.ok().build();
     }
     
-    @GetMapping
+    @GetMapping("/todos")
     public List<Professor> listar(){
       return Professorservice.listar();
     }

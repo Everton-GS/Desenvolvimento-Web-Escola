@@ -27,29 +27,29 @@ public class Aluno {
     @Id
     private long id;
 
-    @Column(name = "Login")
+    @Column(name = "Login_aluno")
     private String login;
     
-    @Column(name = "Senha")
+    @Column(name = "Senha_aluno")
     private String senha;
     
-    @Column(name = "Nome")
+    @Column(name = "Nome_aluno")
     private String nome;
    
-    @Column(name = "Genero")
+    @Column(name = "Genero_aluno")
     private char genero;
 
     @Temporal(TemporalType.DATE)
-    @Column(name = "Nascimento")
+    @Column(name = "nascimento_aluno")
     private Date data;
 
-    @Column(name = "email")
+    @Column(name = "email_aluno")
     private String email;
 
-    @Column(name = "Telefone")
+    @Column(name = "Telefone_aluno")
     private String telefone;
 
-    @Column(name = "TelefoneEmergencia")
+    @Column(name = "TelefoneEmergencia_aluno")
     private String contatoEmerfencial;
 
     
